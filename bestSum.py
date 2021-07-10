@@ -4,20 +4,22 @@
 # amount of numbers
 # numbers can be repeated
 
-class bestSum:
-    shortestCombination = None                  # Class Variable
-
+class bestSumClass:
     def __init__(self, targetSum, arr):
+        shortestCombination = None
+        targetSum = self.targetSum
+        arr = targetSum.arr              # Class Variable
 
-        if targetSum == 0:
+    def bestSum(self):
+        if self.targetSum == 0:
             return []
 
-        if targetSum < 0:
+        if self.targetSum < 0:
             return None
 
-        for i in arr:
-            remainder = targetSum-i
-            lastsum = bestSum(self, remainder, arr)
+        for i in self.arr:
+            remainder = self.targetSum-i
+            lastsum = bestSum(self, remainder, self.arr)
             if lastsum != None:
                 combination = lastsum+[i]
                 if combination < self.shortestCombination:
@@ -26,4 +28,4 @@ class bestSum:
         return self.shortestCombination
 
 
-print(bestSum(7, [5, 3, 4, 7]))
+print(bestSumClass(7, [5, 3, 4, 7]))
