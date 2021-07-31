@@ -33,7 +33,7 @@ if __name__ == '__main__':
     # X = int(input().strip())
 
     # N = int(input().strip())
-    X = 19
+    X = 100
     N = 2
 
     rangelist = list(range(1, math.ceil(X**(1/N))))

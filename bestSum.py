@@ -1,31 +1,33 @@
-# You are given an arr and a target sum
-# which you have to achieve using the
-# elements from the array using least
-# amount of numbers
-# numbers can be repeated
+def bestSum(targetSum, numbers, dict1):
+    if targetSum in dict1:
+        return dict1[targetSum]
+    if targetSum == 0:
+        return []
+    if targetSum <= 0:
+        return None
+    shortestCombination = None
 
-class bestSumClass:
-    def __init__(self, targetSum, arr):
-        shortestCombination = None
-        targetSum = self.targetSum
-        arr = targetSum.arr              # Class Variable
+    for i in numbers:
+        remainderSum = targetSum-i
+        combination = bestSum(remainderSum, numbers, dict1)
+        if combination != None:
+            combination = [i]+combination
+            print(combination)
+            if shortestCombination == None:
+                dict1[targetSum] = combination
+                shortestCombination = combination
+            elif len(combination) < len(shortestCombination):
+                print("Theshortestcombinatino", shortestCombination)
+                dict1[targetSum] = shortestCombination
+                shortestCombination = combination
 
-    def bestSum(self):
-        if self.targetSum == 0:
-            return []
-
-        if self.targetSum < 0:
-            return None
-
-        for i in self.arr:
-            remainder = self.targetSum-i
-            lastsum = bestSum(self, remainder, self.arr)
-            if lastsum != None:
-                combination = lastsum+[i]
-                if combination < self.shortestCombination:
-                    shortestCombination = combination
-
-        return self.shortestCombination
+    return shortestCombination
 
 
-print(bestSumClass(7, [5, 3, 4, 7]))
+if __name__ == '__main__':
+    dict1 = {}
+    print("the returned value is", bestSum(100, [25, 3, 4, 2, 1], dict1))
+    # print(dict1)
+    dict1 = {}
+
+# targeSUM=m n=array length

@@ -75,12 +75,12 @@ if __name__ == '__main__':
     ]
     route_graph = Graph(routes)
 
-    start = "Mumbai"
-    end = "New York"
+    start = "Paris"
+    end = "Toronto"
 
     print("These are all the possible paths between", start, "and", end, "\n", route_graph.get_paths(
         start, end))
-    print("\nThe shortes path between", start, "and", end,
+    print("\nThe shortest path between", start, "and", end,
           route_graph.get_shortest_path(start, end))
 
 #       ┌───────► paris──────────────┐

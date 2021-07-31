@@ -49,9 +49,11 @@ def canConstruct(target, wordBank):
 if __name__ == '__main__':
     # target = "abcdef"
     # wordBank = ["ab,abc,cd,def,abcd"]
-    target = "somethingintheway"
-    wordBank = ["something", "in", "the", "way"]
-
+    # target = "somethingintheway"
+    # wordBank = ["something", "in", "the", "way"]
+    target = "hellofromtheotherside"
+    wordBank = ["SOME", "SOMETHING ELSE", "the", "that",
+                "hello", "from", "the", "other", "side", "print", "else"]
     # print(removeString("abcde", "abc"))
     # print(removeString("somethinginetheway", "theway"))
     # print(removeString("something", "hello"))
