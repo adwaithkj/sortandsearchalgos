@@ -41,13 +41,13 @@ if __name__ == "__main__":
     arr = [5, 1, 3, 4, 6, 2, 8]
     lists = []
     # n = input("enter the value of k for the kth smallest element")
-    n = int(input().strip())
+    # n = int(input().strip())
 
-    arr = []
+    # arr = []
 
-    for _ in range(n):
-        arr_item = int(input().strip())
-        arr.append(arr_item)
+    # for _ in range(n):
+    #     arr_item = int(input().strip())
+    #     arr.append(arr_item)
 
     print(LIS(arr, lists))
     print(lists)
