@@ -7,7 +7,7 @@ class TreeNode:
 
 
 class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+    def buildTree(self, preorder, inorder):
 
         x = preorder[0]
         index = inorder.index(x)

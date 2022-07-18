@@ -1,6 +1,6 @@
 class Solution:
 
-    def generate(self, numRows: int) -> List[List[int]]:
+    def generate(self, numRows: int):
 
         self.result = []
 
